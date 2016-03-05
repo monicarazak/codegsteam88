@@ -6,10 +6,16 @@
         padding: 0;
     }
     .db-component-base {
-        background-color: #313132;
         width: 100%;
         height: 100%;
     }
+
+    .section {
+        width: 50%;
+        height: 50%;
+        font-color: white;
+    }
+
     .link-button {
         float: right;
         margin-right: 20px;
@@ -17,5 +23,25 @@
     .row {
         margin-right: 0;
         margin-left: 0;
+    }
+
+    .food{
+        float:left;
+        border: 1px solid;
+        padding: 10%;
+        width:50%;
+        height:50%;
+    }
+    .music{
+        border: 1px solid;
+        margin-left:50%;
+        padding: 10%;
+        margin-top: -20px;
+        height:50%;
+    }
+    .nightlife{
+     clear:left;
+     padding: 10%;
+     border: 1px solid;
     }
 }

@@ -28,9 +28,7 @@ const COMPONENT_TO_SHOW = MyComponent;
     render() {
         return (
             <div className="dashboard">
-                <Gridster definedLayout={this.state.definedLayout} onGridsterSet={this.gridsterSet.bind(this)}>
-                    {this.insertComponents(this.state.components)}
-                </Gridster>
+                <COMPONENT_TO_SHOW />
             </div>
             )
     }

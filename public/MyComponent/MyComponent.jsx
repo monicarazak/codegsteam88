@@ -57,6 +57,19 @@ export default class MyComponent extends React.Component {
 		console.log('drag stopped');
 	}
 
+    requestData(category, zipcode) {
+        var url - ".api/" + category + "/" + zipcode;
+        $.ajax({
+            url: url,
+        context: document.body
+            }).done(function(data) {
+        console.log(data);
+            });
+    }
+
+
+
+
     // ---------------------------------------------------
     // ACTUAL CODE FOR COMPONENT THAT DOES ANYTHING
     // ----------------------------------------------------
@@ -86,12 +99,30 @@ export default class MyComponent extends React.Component {
 	 * @return {[type]} [description]
 	 */
   	render() {
+        this.requestData("music", "10001");
 	    return (
-		<div className='my-component'>
-            <br/>
-            <input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
-            <br/>
-            <p style={{color:'white'}}>Welcome: {this.state.userName} </p>
+        <div className='mother'>
+            <p style={{fontSize:'200%'}}> Find an Event </p>
+
+    		<div className=' food'>
+                <p style={{color:'white'}}>Comedy: {this.state.userName} </p>
+                <br/>
+                <button style={{backgroundColor:'blue'}} type="button" onclick="alert('Hi')">Search Comedy Events !</button>
+                
+            </div>
+            <br></br>
+            <div className='music'>
+                <p style={{color:'white'}}>Music: {this.state.userName} </p>
+                <br/>
+                <button style={{backgroundColor:'blue'}} type="button" onclick="alert('Hi')">Search music Events!</button>
+               
+            </div>
+            <div className='nightlife'>
+                <p style={{color:'white'}}>Nightlife: {this.state.userName} </p>
+                <br/>
+                <button style={{backgroundColor:'blue'}} type="button" onclick="alert('Hi')">Search Nightlife Events !</button>
+               
+            </div>
         </div>
 	    );
   	}

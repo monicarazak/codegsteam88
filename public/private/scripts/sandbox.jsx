@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import Dashboard from './src/dashboard/Dashboard';
 import Header from './src/header/Header';
 
+// var Calendar = require("react-data-calendar");
+
+
 class Sandbox extends React.Component {
 
     render() {

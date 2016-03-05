@@ -19,7 +19,7 @@ gulp.task('build', function () {
   .pipe(gulp.dest('private/dist'));
 });
 
-gulp.task('default', ['build']);
+gulp.task('default', ['build', 'watch']);
 
 //scss
 gulp.task('sass', function() {
@@ -30,6 +30,6 @@ gulp.task('sass', function() {
 
 //watch scss and jsx files
 gulp.task('watch', function(){
-	gulp.watch('./scripts/**/*.jsx', ['build']);
-  gulp.watch('./sass/**/*.scss', ['styles']);
+	gulp.watch('./**/*.jsx', ['build']);
+  gulp.watch('./**/*.scss', ['styles']);
 });
